@@ -17,8 +17,3 @@ Variations have been created by famous designers such as Karl Lagerfeld for Chan
 
 ## Live Site
 [https://leatherlegwarmers.com](https://leatherlegwarmers.com)
-
-## Usage
-1. Clone or download this repository.
-2. Update the `index.html` with your actual Stripe/PayPal links and product images.
-3. Deploy to GitHub Pages (main branch) or any static hosting platform.
