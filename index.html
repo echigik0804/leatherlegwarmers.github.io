@@ -17,108 +17,101 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 /* HEADER */
 .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .logo {
-    max-width: 200px;
+    max-width: 180px;
 }
 h1 {
     color: black;
-    font-size: 42px;
+    font-size: 40px;
+    margin-top: 10px;
 }
 
-<div class="description">
-    <h2>Luxury Leather Leg Warmers – As Seen on Runways</h2>
-    <p>
-    Elevate your style with our 100% genuine leather leg warmers. 
-    Designed to be worn over shoes, pumps, booties, or ankle boots, 
-    they create the elegant illusion of boots from ankle to knee —
-    regardless of heel height.
-    </p>
+/* DESCRIPTION */
+.description {
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto 40px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+.description h2 {
+    color: black;
+    margin-bottom: 15px;
+}
 
-    <p>
-    These runway-inspired pieces visually elongate the legs and add a 
-    bold, sophisticated edge. Loved by fashion-forward women and 
-    celebrities worldwide.
-    </p>
-
-    <p>
-    Variations have been created by iconic designers such as Karl Lagerfeld 
-    for Chanel, Phillip Lim, and Givenchy. Our collection captures that 
-    same high-fashion elegance in rare, butter-soft genuine leather.
-    </p>
-</div>
-
-/* 1/3 – 2/3 LAYOUT */
-.product-section {
+/* 1/3 - 2/3 SECTION */
+.media-section {
     display: flex;
-    gap: 25px;      /* tighter */
-    align-items: flex-start;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
-/* LEFT SIDE (VIDEO 1/3) */
-.product-left {
-    flex: 1;
-    display: flex;
+/* VIDEO 1/3 */
+.video-side {
+    flex: 0 0 33%;
 }
-.product-left iframe {
+.video-side iframe {
     width: 100%;
+    height: 360px;
     border-radius: 10px;
-    min-height: 380px;
 }
 
-/* RIGHT SIDE (SLIDER + DETAILS 2/3) */
-.product-right {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
+/* SLIDER 2/3 */
+.slider-side {
+    flex: 0 0 67%;
 }
 
-/* SLIDER */
 .slider {
     position: relative;
-    height: 380px;           /* SAME height as your video */
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
-/* IMAGE */
 .slider img {
-    height: 100%;            /* match slider height */
-    width: auto;             /* shrink width naturally */
-    object-fit: contain;     /* keep proportions */
+    height: 100%;
+    width: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
+
+/* ARROWS */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
+    font-size: 28px;
     padding: 12px;
-    color: gold;
     background: rgba(0,0,0,0.5);
-    cursor: pointer;
+    color: gold;
     border-radius: 50%;
+    cursor: pointer;
 }
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* PRICE */
+/* PRICE + OPTIONS */
+.product-details {
+    text-align: center;
+    margin-top: 30px;
+}
+
 .price {
     font-size: 28px;
     color: black;
-    margin: 20px 0 10px;
+    margin-bottom: 15px;
 }
 
-/* SIZE SELECT */
 select {
     padding: 10px;
     font-size: 16px;
@@ -128,14 +121,13 @@ select {
 
 /* BUTTONS */
 .btn {
+    display: block;
     padding: 15px;
-    margin-bottom: 15px;
-    width: 100%;
-    max-width: 300px;
+    margin: 10px auto;
+    width: 260px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 6px;
-    text-align: center;
     text-decoration: none;
 }
 .stripe {
@@ -165,62 +157,83 @@ th {
 
 /* MOBILE */
 @media (max-width: 900px) {
-    .product-section {
+    .media-section {
         flex-direction: column;
     }
-    .product-left iframe {
-        min-height: 300px;
+    .video-side, .slider-side {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    .video-side iframe,
+    .slider {
+        height: 300px;
     }
 }
 </style>
 </head>
-<body>
 
+<body>
 <div class="container">
 
+<!-- HEADER -->
 <div class="header">
     <img src="logo.jpg" class="logo">
     <h1>Leather Leg Warmers</h1>
 </div>
 
-<div class="product-section">
+<!-- DESCRIPTION -->
+<div class="description">
+    <h2>Luxury Leather Leg Warmers – As Seen on Runways</h2>
+    <p>
+        Elevate your style with 100% genuine leather leg warmers.
+        Designed to be worn over shoes, pumps, booties, or ankle boots,
+        they create the elegant illusion of boots from ankle to knee.
+    </p>
+    <p>
+        Inspired by high fashion and crafted from rare butter-soft leather,
+        they elongate the leg and add a bold, sophisticated statement.
+    </p>
+</div>
 
-    <!-- VIDEO 1/3 -->
-    <div class="product-left">
+<!-- VIDEO + SLIDER -->
+<div class="media-section">
+
+    <!-- VIDEO -->
+    <div class="video-side">
         <iframe src="https://www.youtube.com/embed/zCBovYfN34Q"
         frameborder="0"
         allowfullscreen></iframe>
     </div>
 
-    <!-- SLIDER + DETAILS 2/3 -->
-    <div class="product-right">
-
+    <!-- SLIDER -->
+    <div class="slider-side">
         <div class="slider">
             <span class="prev" onclick="changeSlide(-1)">❮</span>
-            <img id="sliderImage" src="th_1.jpg">
+            <img id="sliderImage" src="product1.jpg">
             <span class="next" onclick="changeSlide(1)">❯</span>
         </div>
-
-        <div class="price">$145.00</div>
-
-        <label>Select Size:</label>
-        <select>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-        </select>
-
-        <a href="YOUR_STRIPE_LINK" class="btn stripe">Pay with Card / Google Pay</a>
-        <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
-
     </div>
 
 </div>
 
+<!-- PRODUCT DETAILS -->
+<div class="product-details">
+    <div class="price">$145.00</div>
 
-<!-- SIZE TABLE -->
-<h2 style="margin-top:60px;">Size Chart</h2>
+    <label>Select Size:</label><br>
+    <select>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+    </select>
+
+    <a href="YOUR_STRIPE_LINK" class="btn stripe">Pay with Card / Google Pay</a>
+    <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
+</div>
+
+<!-- SIZE CHART -->
+<h2 style="margin-top:60px; text-align:center;">Size Chart</h2>
 
 <table>
 <tr>
