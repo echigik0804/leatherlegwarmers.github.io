@@ -12,17 +12,15 @@ body {
     font-family: 'Arial', sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #000000; /* main text in black */
+    color: #000000;
     position: relative;
 }
-
-/* LIGHT OVERLAY FOR BLACK TEXT */
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(255,255,255,0.25); /* light overlay */
+    background-color: rgba(255,255,255,0.25);
     z-index: 0;
 }
 
@@ -60,55 +58,56 @@ body::before {
     margin: 20px auto 40px auto;
     line-height: 1.6;
     font-size: 18px;
-    color: #000000; /* black text */
+    color: #000000;
 }
 
-/* PRODUCT GALLERY */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
+/* PRODUCT SLIDER */
+.slider {
+    position: relative;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
 }
-.gallery img {
-    width: 250px;
-    height: auto;
+.slider img {
+    width: 100%;
     border-radius: 10px;
+    display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.slider img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.prev, .next {
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 28px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    user-select: none;
+    transition: background-color 0.3s ease;
 }
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-}
-
-/* RESPONSIVE GALLERY */
-@media screen and (max-width: 768px) {
-    .gallery img { width: 45%; }
-}
-@media screen and (max-width: 480px) {
-    .gallery img { width: 90%; }
-    .header h1 { font-size: 36px; }
-    .description { font-size: 16px; padding: 0 10px; }
-    .btn { max-width: 100%; }
-    select { width: 80%; }
-}
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+.prev { left: -20px; }
+.next { right: -20px; }
 
 /* PRICE */
 .price {
     font-size: 30px;
-    text-align: center;
     color: #ffd700;
-    margin: 20px 0;
+    margin-bottom: 15px;
 }
 
 /* SIZE SELECTOR */
 select {
     padding: 12px;
     font-size: 16px;
-    margin: 20px auto;
-    display: block;
+    margin-bottom: 15px;
     width: 220px;
     border-radius: 6px;
 }
@@ -118,7 +117,7 @@ select {
     display: block;
     width: 100%;
     max-width: 300px;
-    margin: 15px auto;
+    margin-bottom: 15px;
     padding: 15px;
     font-size: 18px;
     border-radius: 6px;
@@ -127,46 +126,47 @@ select {
     text-align: center;
     transition: transform 0.2s ease;
 }
-.btn:hover {
-    transform: scale(1.05);
+.btn:hover { transform: scale(1.05); }
+.stripe { background: #635bff; color: white; }
+.paypal { background: #ffc439; color: black; }
+
+/* TWO-COLUMN VIDEO & DETAILS */
+.product-section {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: flex-start;
 }
-.stripe {
-    background: #635bff;
-    color: white;
-}
-.paypal {
-    background: #ffc439;
-    color: black;
-}
+.product-left { flex: 1 1 33%; }
+.product-left iframe { width: 100%; height: 100%; min-height: 220px; border-radius: 10px; }
+.product-right { flex: 2 1 67%; display: flex; flex-direction: column; align-items: flex-start; }
+.product-right .price,
+.product-right label,
+.product-right select,
+.product-right .btn { margin-bottom: 15px; }
 
 /* SIZE TABLE */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 40px;
-}
-th, td {
-    border: 1px solid #444;
-    padding: 10px;
-    text-align: center;
-}
-th {
-    background: #222;
-    color: #ffd700; /* gold headers */
-}
-td {
-    color: #000000; /* black table content */
-}
-
-/* LABELS */
+table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+th { background: #222; color: #ffd700; }
+td { color: #000000; }
 label { color: #000000; }
 
 /* FOOTER */
-.footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #aaa;
+.footer { margin-top: 40px; text-align: center; font-size: 14px; color: #aaa; }
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .slider img { width: 80%; }
+    .product-section { flex-direction: column; align-items: center; }
+    .product-left, .product-right { flex: 1 1 100%; width: 90%; }
+    .product-right { align-items: center; }
+}
+@media screen and (max-width: 480px) {
+    .header h1 { font-size: 36px; }
+    .description { font-size: 16px; padding: 0 10px; }
+    .btn { max-width: 100%; }
+    select { width: 80%; }
 }
 </style>
 </head>
@@ -188,32 +188,38 @@ label { color: #000000; }
         Explore our collection and find the perfect fit for your style.
     </div>
 
-    <!-- PRODUCT GALLERY -->
-    <div class="gallery">
-        <a href="th_1.jpg" target="_blank"><img src="th_1.jpg" alt="Leather Leg Warmers - View 1"></a>
-        <a href="th_2.jpg" target="_blank"><img src="th_2.jpg" alt="Leather Leg Warmers - View 2"></a>
-        <a href="th_3.jpg" target="_blank"><img src="th_3.jpg" alt="Leather Leg Warmers - View 3"></a>
-	<a href="th_4.jpg" target="_blank"><img src="th_4.jpg" alt="Leather Leg Warmers - View 4"></a>
-        <a href="th_01.jpg" target="_blank"><img src="th_01.jpg" alt="Leather Leg Warmers - View 5"></a>
-        <a href="th_0.jpg" target="_blank"><img src="th_0.jpg" alt="Leather Leg Warmers - View 6"></a>
+    <!-- PRODUCT SLIDER -->
+    <div class="slider">
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <img id="sliderImage" src="th_1.jpg" alt="Leather Leg Warmers">
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
     </div>
 
-    <!-- PRICE -->
-    <div class="price">$145.00</div>
-
-    <!-- SIZE SELECTOR -->
-    <label style="text-align:center; display:block;">Select Size:</label>
-    <select id="size">
-        <option value="">-- Choose Size --</option>
-        <option value="S">Small (S)</option>
-        <option value="M">Medium (M)</option>
-        <option value="L">Large (L)</option>
-        <option value="XL">Extra Large (XL)</option>
-    </select>
-
-    <!-- PAYMENT BUTTONS -->
-    <a href="YOUR_STRIPE_PAYMENT_LINK" class="btn stripe">Pay with Card / Google Pay / Apple Pay</a>
-    <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
+    <!-- VIDEO + PRICE SECTION -->
+    <div class="product-section">
+        <!-- VIDEO 1/3 -->
+        <div class="product-left">
+            <iframe src="https://www.youtube.com/embed/zCBovYfN34Q" 
+                title="Leather Leg Warmers Video" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <!-- PRICE & BUTTONS 2/3 -->
+        <div class="product-right">
+            <div class="price">$145.00</div>
+            <label>Select Size:</label>
+            <select id="size">
+                <option value="">-- Choose Size --</option>
+                <option value="S">Small (S)</option>
+                <option value="M">Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+            </select>
+            <a href="YOUR_STRIPE_PAYMENT_LINK" class="btn stripe">Pay with Card / Google Pay / Apple Pay</a>
+            <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
+        </div>
+    </div>
 
     <!-- SIZE TABLE -->
     <h2 style="margin-top:50px; text-align:center;">Size Chart</h2>
@@ -260,6 +266,18 @@ label { color: #000000; }
     </div>
 
 </div>
+
+<!-- SLIDER SCRIPT -->
+<script>
+const images = ["th_1.jpg","th_2.jpg","th_3.jpg","th_4.jpg","th_01.jpg","th_0.jpg"];
+let currentIndex = 0;
+function changeSlide(direction) {
+    currentIndex += direction;
+    if(currentIndex < 0) currentIndex = images.length - 1;
+    if(currentIndex >= images.length) currentIndex = 0;
+    document.getElementById("sliderImage").src = images[currentIndex];
+}
+</script>
 
 </body>
 </html>
