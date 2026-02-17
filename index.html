@@ -4,58 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leather Leg Warmers | Luxury Handmade</title>
+<meta name="description" content="Luxury leather leg warmers for women – runway-inspired style, butter-soft leather, available in S, M, L, XL. Shop now!">
 <style>
+/* BODY AND BACKGROUND */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
-}
-    <div class="logo">
-    <img src="logo.jpg" alt="Leather Leg Warmers Logo">
-</div>
-.logo img {
-    display: block;
-    max-width: 200px; /* adjust size as needed */
-    margin: 0 auto 20px auto; /* centers logo and adds spacing below */
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000; /* main text in black */
+    position: relative;
 }
 
+/* LIGHT OVERLAY FOR BLACK TEXT */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255,255,255,0.25); /* light overlay */
+    z-index: 0;
+}
+
+/* MAIN CONTAINER */
 .container {
-    padding: 40px 20px;
-    max-width: 900px;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
     margin: auto;
+    padding: 40px 20px;
 }
-h1 {
-    font-size: 42px;
+
+/* HEADER / LOGO */
+.header {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
+.header .logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.header h1 {
+    font-size: 48px;
+    color: #ffd700; /* gold */
+    margin: 0;
+}
+
+/* DESCRIPTION */
 .description {
     text-align: center;
-    max-width: 700px;
+    max-width: 750px;
     margin: 20px auto 40px auto;
     line-height: 1.6;
     font-size: 18px;
+    color: #000000; /* black text */
 }
+
+/* PRODUCT GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+.gallery img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE GALLERY */
+@media screen and (max-width: 768px) {
+    .gallery img { width: 45%; }
+}
+@media screen and (max-width: 480px) {
+    .gallery img { width: 90%; }
+    .header h1 { font-size: 36px; }
+    .description { font-size: 16px; padding: 0 10px; }
+    .btn { max-width: 100%; }
+    select { width: 80%; }
+}
+
+/* PRICE */
 .price {
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
+    color: #ffd700;
     margin: 20px 0;
 }
-img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
-}
+
+/* SIZE SELECTOR */
 select {
     padding: 12px;
     font-size: 16px;
     margin: 20px auto;
     display: block;
     width: 220px;
+    border-radius: 6px;
 }
+
+/* BUTTONS */
 .btn {
     display: block;
     width: 100%;
@@ -67,6 +125,10 @@ select {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    transition: transform 0.2s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
 }
 .stripe {
     background: #635bff;
@@ -76,6 +138,8 @@ select {
     background: #ffc439;
     color: black;
 }
+
+/* SIZE TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -88,7 +152,16 @@ th, td {
 }
 th {
     background: #222;
+    color: #ffd700; /* gold headers */
 }
+td {
+    color: #000000; /* black table content */
+}
+
+/* LABELS */
+label { color: #000000; }
+
+/* FOOTER */
 .footer {
     margin-top: 40px;
     text-align: center;
@@ -101,19 +174,31 @@ th {
 
 <div class="container">
 
-    <h1>Leather Leg Warmers</h1>
+    <!-- HEADER -->
+    <div class="header">
+        <img src="logo.jpg" alt="Leather Leg Warmers Logo" class="logo">
+        <h1>Leather Leg Warmers</h1>
+    </div>
 
+    <!-- DESCRIPTION -->
     <div class="description">
         <strong>Luxury Leather Leg Warmers – As Seen on Runways</strong><br><br>
         Elevate your style with our 100% genuine leather leg warmers. Wear them over shoes, pumps, booties, or ankle boots to create the look of boots from ankle to knee, regardless of heel height. They visually elongate your legs and add a sexy, runway-inspired touch — loved by celebrities worldwide.<br><br>
-        Variations have been designed by fashion icons such as Karl Lagerfeld for Chanel, Phillip Lim, and Givenchy. Our collection captures that high-fashion elegance in a rare, hard-to-find, butter-soft leather.<br><br>
-        Explore our collection and find the perfect fit for your style. Each pair is crafted to deliver luxurious comfort and unmatched quality.
+        Variations have been designed by fashion icons such as Karl Lagerfeld for Chanel, Phillip Lim, and Givenchy. Our collection captures that high-fashion elegance in a rare, butter-soft leather.<br><br>
+        Explore our collection and find the perfect fit for your style.
     </div>
 
-    <img src="https://via.placeholder.com/500x500" alt="Leather Leg Warmers">
+    <!-- PRODUCT GALLERY -->
+    <div class="gallery">
+        <a href="product1.jpg" target="_blank"><img src="product1.jpg" alt="Leather Leg Warmers - View 1"></a>
+        <a href="product2.jpg" target="_blank"><img src="product2.jpg" alt="Leather Leg Warmers - View 2"></a>
+        <a href="product3.jpg" target="_blank"><img src="product3.jpg" alt="Leather Leg Warmers - View 3"></a>
+    </div>
 
+    <!-- PRICE -->
     <div class="price">$145.00</div>
 
+    <!-- SIZE SELECTOR -->
     <label style="text-align:center; display:block;">Select Size:</label>
     <select id="size">
         <option value="">-- Choose Size --</option>
@@ -123,17 +208,12 @@ th {
         <option value="XL">Extra Large (XL)</option>
     </select>
 
-    <!-- Replace the links below with your actual payment links -->
-    <a href="YOUR_STRIPE_PAYMENT_LINK" class="btn stripe">
-        Pay with Card / Google Pay / Apple Pay
-    </a>
+    <!-- PAYMENT BUTTONS -->
+    <a href="YOUR_STRIPE_PAYMENT_LINK" class="btn stripe">Pay with Card / Google Pay / Apple Pay</a>
+    <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
 
-    <a href="YOUR_PAYPAL_LINK" class="btn paypal">
-        Pay with PayPal
-    </a>
-
+    <!-- SIZE TABLE -->
     <h2 style="margin-top:50px; text-align:center;">Size Chart</h2>
-
     <table>
         <tr>
             <th>Measurement</th>
@@ -180,4 +260,3 @@ th {
 
 </body>
 </html>
-
