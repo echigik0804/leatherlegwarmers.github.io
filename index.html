@@ -4,169 +4,143 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leather Leg Warmers | Luxury Handmade</title>
-<meta name="description" content="Luxury leather leg warmers for women – runway-inspired style, butter-soft leather, available in S, M, L, XL. Shop now!">
+
 <style>
-/* BODY AND BACKGROUND */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #000000;
-    position: relative;
-}
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(255,255,255,0.25);
-    z-index: 0;
+    color: #000;
 }
 
-/* MAIN CONTAINER */
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     padding: 40px 20px;
 }
 
-/* HEADER / LOGO */
+/* HEADER */
 .header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
-.header .logo {
+.logo {
     max-width: 200px;
+}
+h1 {
+    color: #d4af37;
+    font-size: 42px;
+}
+
+/* 1/3 – 2/3 LAYOUT */
+.product-section {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* LEFT SIDE (VIDEO 1/3) */
+.product-left {
+    flex: 1;
+    display: flex;
+}
+.product-left iframe {
     width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-.header h1 {
-    font-size: 48px;
-    color: #ffd700; /* gold */
-    margin: 0;
+    border-radius: 10px;
+    min-height: 500px;
 }
 
-/* DESCRIPTION */
-.description {
-    text-align: center;
-    max-width: 750px;
-    margin: 20px auto 40px auto;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #000000;
+/* RIGHT SIDE (SLIDER + DETAILS 2/3) */
+.product-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
 }
 
-/* PRODUCT SLIDER */
+/* SLIDER */
 .slider {
     position: relative;
-    max-width: 500px;
-    margin: 30px auto;
-    text-align: center;
+    width: 100%;
 }
 .slider img {
     width: 100%;
     border-radius: 10px;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.slider img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 .prev, .next {
-    cursor: pointer;
     position: absolute;
     top: 50%;
-    padding: 16px;
-    margin-top: -22px;
-    color: #ffd700;
-    font-weight: bold;
-    font-size: 28px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 12px;
+    color: gold;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.5);
-    user-select: none;
-    transition: background-color 0.3s ease;
 }
-.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
-.prev { left: -20px; }
-.next { right: -20px; }
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* PRICE */
 .price {
-    font-size: 30px;
-    color: #ffd700;
-    margin-bottom: 15px;
+    font-size: 28px;
+    color: #d4af37;
+    margin: 20px 0 10px;
 }
 
-/* SIZE SELECTOR */
+/* SIZE SELECT */
 select {
-    padding: 12px;
+    padding: 10px;
     font-size: 16px;
-    margin-bottom: 15px;
-    width: 220px;
-    border-radius: 6px;
+    width: 200px;
+    margin-bottom: 20px;
 }
 
 /* BUTTONS */
 .btn {
-    display: block;
+    padding: 15px;
+    margin-bottom: 15px;
     width: 100%;
     max-width: 300px;
-    margin-bottom: 15px;
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 6px;
-    text-decoration: none;
+    font-size: 16px;
     font-weight: bold;
+    border-radius: 6px;
     text-align: center;
-    transition: transform 0.2s ease;
+    text-decoration: none;
 }
-.btn:hover { transform: scale(1.05); }
-.stripe { background: #635bff; color: white; }
-.paypal { background: #ffc439; color: black; }
-
-/* TWO-COLUMN VIDEO & DETAILS */
-.product-section {
-    display: flex;
-    gap: 30px;
-    margin: 40px 0;
-    align-items: flex-start;
+.stripe {
+    background: #635bff;
+    color: white;
 }
-.product-left { flex: 1 1 33%; }
-.product-left iframe { width: 100%; height: 100%; min-height: 220px; border-radius: 10px; }
-.product-right { flex: 2 1 67%; display: flex; flex-direction: column; align-items: flex-start; }
-.product-right .price,
-.product-right label,
-.product-right select,
-.product-right .btn { margin-bottom: 15px; }
+.paypal {
+    background: #ffc439;
+    color: black;
+}
 
 /* SIZE TABLE */
-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
-th, td { border: 1px solid #444; padding: 10px; text-align: center; }
-th { background: #222; color: #ffd700; }
-td { color: #000000; }
-label { color: #000000; }
-
-/* FOOTER */
-.footer { margin-top: 40px; text-align: center; font-size: 14px; color: #aaa; }
-
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .slider img { width: 80%; }
-    .product-section { flex-direction: column; align-items: center; }
-    .product-left, .product-right { flex: 1 1 100%; width: 90%; }
-    .product-right { align-items: center; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 60px;
 }
-@media screen and (max-width: 480px) {
-    .header h1 { font-size: 36px; }
-    .description { font-size: 16px; padding: 0 10px; }
-    .btn { max-width: 100%; }
-    select { width: 80%; }
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #111;
+    color: gold;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .product-section {
+        flex-direction: column;
+    }
+    .product-left iframe {
+        min-height: 300px;
+    }
 }
 </style>
 </head>
@@ -174,107 +148,77 @@ label { color: #000000; }
 
 <div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
-        <img src="logo.jpg" alt="Leather Leg Warmers Logo" class="logo">
-        <h1>Leather Leg Warmers</h1>
+<div class="header">
+    <img src="logo.jpg" class="logo">
+    <h1>Leather Leg Warmers</h1>
+</div>
+
+<div class="product-section">
+
+    <!-- VIDEO 1/3 -->
+    <div class="product-left">
+        <iframe src="https://www.youtube.com/embed/zCBovYfN34Q"
+        frameborder="0"
+        allowfullscreen></iframe>
     </div>
 
-    <!-- DESCRIPTION -->
-    <div class="description">
-        <strong>Luxury Leather Leg Warmers – As Seen on Runways</strong><br><br>
-        Elevate your style with our 100% genuine leather leg warmers. Wear them over shoes, pumps, booties, or ankle boots to create the look of boots from ankle to knee, regardless of heel height. They visually elongate your legs and add a sexy, runway-inspired touch — loved by celebrities worldwide.<br><br>
-        Variations have been designed by fashion icons such as Karl Lagerfeld for Chanel, Phillip Lim, and Givenchy. Our collection captures that high-fashion elegance in a rare, butter-soft leather.<br><br>
-        Explore our collection and find the perfect fit for your style.
-    </div>
+    <!-- SLIDER + DETAILS 2/3 -->
+    <div class="product-right">
 
-    <!-- PRODUCT SLIDER -->
-    <div class="slider">
-        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
-        <img id="sliderImage" src="th_1.jpg" alt="Leather Leg Warmers">
-        <span class="next" onclick="changeSlide(1)">&#10095;</span>
-    </div>
-
-    <!-- VIDEO + PRICE SECTION -->
-    <div class="product-section">
-        <!-- VIDEO 1/3 -->
-        <div class="product-left">
-            <iframe src="https://www.youtube.com/embed/zCBovYfN34Q" 
-                title="Leather Leg Warmers Video" 
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <div class="slider">
+            <span class="prev" onclick="changeSlide(-1)">❮</span>
+            <img id="sliderImage" src="th_1.jpg">
+            <span class="next" onclick="changeSlide(1)">❯</span>
         </div>
-        <!-- PRICE & BUTTONS 2/3 -->
-        <div class="product-right">
-            <div class="price">$145.00</div>
-            <label>Select Size:</label>
-            <select id="size">
-                <option value="">-- Choose Size --</option>
-                <option value="S">Small (S)</option>
-                <option value="M">Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-            </select>
-            <a href="YOUR_STRIPE_PAYMENT_LINK" class="btn stripe">Pay with Card / Google Pay / Apple Pay</a>
-            <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
-        </div>
-    </div>
 
-    <!-- SIZE TABLE -->
-    <h2 style="margin-top:50px; text-align:center;">Size Chart</h2>
-    <table>
-        <tr>
-            <th>Measurement</th>
-            <th>S</th>
-            <th>M</th>
-            <th>L</th>
-            <th>XL</th>
-        </tr>
-        <tr>
-            <td>Inseam Length</td>
-            <td>25 1/2"</td>
-            <td>26"</td>
-            <td>26 1/2"</td>
-            <td>27"</td>
-        </tr>
-        <tr>
-            <td>Calf Circumference</td>
-            <td>13 1/2"</td>
-            <td>14 1/2"</td>
-            <td>15 1/2"</td>
-            <td>16 1/2"</td>
-        </tr>
-        <tr>
-            <td>Thigh Circumference</td>
-            <td>14–17"</td>
-            <td>15–18"</td>
-            <td>16–19"</td>
-            <td>17–20"</td>
-        </tr>
-        <tr>
-            <td>Ankle Circumference</td>
-            <td>9 1/2"</td>
-            <td>10"</td>
-            <td>10 1/2"</td>
-            <td>11"</td>
-        </tr>
-    </table>
+        <div class="price">$145.00</div>
 
-    <div class="footer">
-        © 2026 LeatherLegWarmers.com — All rights reserved
+        <label>Select Size:</label>
+        <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+        </select>
+
+        <a href="YOUR_STRIPE_LINK" class="btn stripe">Pay with Card / Google Pay</a>
+        <a href="YOUR_PAYPAL_LINK" class="btn paypal">Pay with PayPal</a>
+
     </div>
 
 </div>
 
-<!-- SLIDER SCRIPT -->
+<!-- SIZE TABLE -->
+<h2 style="margin-top:60px;">Size Chart</h2>
+
+<table>
+<tr>
+<th>Measurement</th><th>S</th><th>M</th><th>L</th><th>XL</th>
+</tr>
+<tr>
+<td>Inseam</td><td>25 1/2"</td><td>26"</td><td>26 1/2"</td><td>27"</td>
+</tr>
+<tr>
+<td>Calf</td><td>13 1/2"</td><td>14 1/2"</td><td>15 1/2"</td><td>16 1/2"</td>
+</tr>
+<tr>
+<td>Thigh</td><td>14-17"</td><td>15-18"</td><td>16-19"</td><td>17-20"</td>
+</tr>
+<tr>
+<td>Ankle</td><td>9 1/2"</td><td>10"</td><td>10 1/2"</td><td>11"</td>
+</tr>
+</table>
+
+</div>
+
 <script>
 const images = ["th_1.jpg","th_2.jpg","th_3.jpg","th_4.jpg","th_01.jpg","th_0.jpg"];
 let currentIndex = 0;
+
 function changeSlide(direction) {
     currentIndex += direction;
-    if(currentIndex < 0) currentIndex = images.length - 1;
-    if(currentIndex >= images.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
     document.getElementById("sliderImage").src = images[currentIndex];
 }
 </script>
