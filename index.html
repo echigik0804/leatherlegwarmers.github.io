@@ -676,13 +676,80 @@
 </script>
 
 <script>
-setInterval(() => {
-  const active = document.querySelector('.slide.active');
-  const next = active?.nextElementSibling || document.querySelector('.slide');
-  active?.classList.remove('active');
-  next.classList.add('active');
-}, 4000);
-</script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      const slider = document.querySelector('.hero-slider');
+      if (!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll('.hero-slider-track img'));
+      const dots = Array.from(slider.querySelectorAll('.hero-slider-dot'));
+      const prev = slider.querySelector('.hero-slider-prev');
+      const next = slider.querySelector('.hero-slider-next');
+
+      let current = 0;
+      let timer;
+
+      function goTo(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((img, i) => {
+          img.classList.toggle('is-active', i === current);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('is-active', i === current);
+        });
+      }
+
+      function nextSlide() {
+        goTo(current + 1);
+      }
+
+      function startAuto() {
+        stopAuto();
+        timer = setInterval(nextSlide, 5000);
+      }
+
+      function stopAuto() {
+        if (timer) clearInterval(timer);
+      }
+
+      // Init
+      if (slides[0]) slides[0].classList.add('is-active');
+      startAuto();
+
+      // Controls
+      if (next) {
+        next.addEventListener('click', () => {
+          stopAuto();
+          nextSlide();
+          startAuto();
+        });
+      }
+
+      if (prev) {
+        prev.addEventListener('click', () => {
+          stopAuto();
+          goTo(current - 1);
+          startAuto();
+        });
+      }
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const idx = parseInt(dot.getAttribute('data-slide'), 10);
+          if (isNaN(idx)) return;
+          stopAuto();
+          goTo(idx);
+          startAuto();
+        });
+      });
+
+      // Pause on hover (desktop)
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
+    })();
+  </script>
+
 
 
 </body>
