@@ -1,282 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leather Leg Warmers | Luxury Handmade</title>
+  <meta charset="UTF-8" />
+  <title>Leather Leg Warmers – 100% Genuine Leather Thigh‑High Leg Warmers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Elevate your style with 100% genuine leather thigh‑high leg warmers designed to be worn over shoes, pumps, booties, or ankle boots for a bold, elongated boot look." />
+  <link rel="canonical" href="https://leatherlegwarmers.com/" />
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #000;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* HEADER */
-.header {
-    margin-bottom: 30px;
-}
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* keeps it centered overall */
-    gap: 20px;
-}
-
-.logo {
-    height: 90px;   /* adjust if needed */
-    width: auto;
-}
-
-h1 {
-    color: black;
-    font-size: 36px;
-    margin: 0;
-}
-
-/* DESCRIPTION */
-.description {
-    text-align: center;
-    max-width: 900px;
-    margin: 20px auto 40px;
-    font-size: 17px;
-    line-height: 1.6;
-}
-.description h2 {
-    color: black;
-    margin-bottom: 15px;
-}
-
-/* 1/3 - 2/3 SECTION */
-.media-section {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-/* VIDEO 1/3 */
-.video-side {
-    flex: 0 0 33%;
-}
-.video-side iframe {
-    width: 100%;
-    height: 360px;
-    border-radius: 10px;
-}
-
-/* SLIDER 2/3 */
-.slider-side {
-    flex: 0 0 67%;
-}
-
-.slider {
-    position: relative;
-    height: 360px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slider img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-/* ARROWS */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-    padding: 12px;
-    background: rgba(0,0,0,0.5);
-    color: gold;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* PRICE + OPTIONS */
-.product-details {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.price {
-    font-size: 28px;
-    color: black;
-    margin-bottom: 15px;
-}
-
-select {
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-/* BUTTONS */
-.btn {
-    display: block;
-    padding: 15px;
-    margin: 10px auto;
-    width: 260px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-}
-.stripe {
-    background: #635bff;
-    color: white;
-}
-.paypal {
-    background: #ffc439;
-    color: black;
-}
-
-/* SIZE TABLE */
-table {
-    width: 20%;
-    border-collapse: collapse;
-    margin-top: 60px;
-}
-th, td {
-    border: 1px solid #444;
-    padding: 10px;
-    text-align: center;
-}
-th {
-    background: #111;
-    color: gold;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    .header-inner {
-        flex-direction: column;
+  <link rel="preload" href="/images/hero-leg-warmers.jpg" as="image" />
+  <link rel="preload" href="background.jpg" as="image" />
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --accent: #c79b63;
+      --text: #111111;
+      --muted: #666666;
+      --card-bg: rgba(255,255,255,0.92);
     }
-    .video-side, .slider-side {
-        flex: 0 0 100%;
-        width: 100%;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #e9e9e9 url("background.jpg") center/cover fixed no-repeat;
+      color: var(--text);
+      line-height: 1.6;
     }
-    .video-side iframe,
-    .slider {
-        height: 300px;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
-}
-</style>
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
+    }
+    .nav {
+      padding: 0.55rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+    .logo-text {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+    .nav-links a { opacity: 0.9; color: var(--text); }
+    .nav-links a:hover { opacity: 1; }
+    .btn-primary,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: #e2b87e;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border-color: rgba(0,0,0,0.3);
+    }
+    .btn-outline:hover {
+      background: rgba(0,0,0,0.04);
+    }
+    main {
+      padding-top: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+      padding: 1.75rem 1.5rem 2.1rem;
+      backdrop-filter: blur(6px);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
+      gap: 2.25rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.25rem, 2.7vw + 1rem, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .hero-sub {
+      color: var(--muted);
+      max-width: 32rem;
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .hero-list li + li { margin-top: 0.3rem; }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-media-wrapper {
+      position: relative;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: #000;
+      min-height: 260px;
+      aspect-ratio: 16 / 9;
+    }
+    .hero-media-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .badge {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      background: rgba(255,255,255,0.95);
+      border-radius: 999px;
+      padding: 0.35rem 0.9rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      border: 1px solid rgba(0,0,0,0.12);
+      z-index: 2;
+    }
+    .badge span {
+      color: var(--accent);
+      margin-right: 0.25rem;
+    }
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 0.5rem 0 1.75rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .section {
+      margin-top: 2.5rem;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .section-header h2 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 500;
+    }
+    .section-header p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 28rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem;
+    }
+    .product-card {
+      padding: 0.9rem;
+      border-radius: 1.1rem;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.96);
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    .product-media {
+      border-radius: 0.85rem;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: #f3f3f3;
+    }
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .product-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .price {
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .pill {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.16);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .product-actions {
+      margin-top: 0.4rem;
+      display: flex;
+      gap: 0.6rem;
+    }
+    .product-actions .btn-primary,
+    .product-actions .btn-outline {
+      flex: 1;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.8rem;
+    }
+    .sizing-table-wrapper {
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 0.75rem;
+      min-width: 360px;
+      background: rgba(255,255,255,0.96);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 0.4rem 0.55rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(0,0,0,0.04);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .care-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .care-list li + li { margin-top: 0.3rem; }
+    footer {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .card {
+        padding: 1.25rem 1rem 1.7rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
-
-<!-- HEADER -->
-<div class="header">
-    <div class="header-inner">
-        <img src="logo.jpg" class="logo">
-        <h1>Leather Leg Warmers</h1>
-    </div>
-</div>
-
-<!-- DESCRIPTION -->
-<div class="description">
-    <h2>Luxury Leather Leg Warmers – As Seen on Runways</h2>
-    <p>
-        Elevate your style with 100% genuine leather leg warmers.
-        Designed to be worn over shoes, pumps, booties, or ankle boots,
-        they create the elegant illusion of boots from ankle to knee.
-    </p>
-    <p>
-        Inspired by high fashion and crafted from rare butter-soft leather,
-        they elongate the leg and add a bold, sophisticated statement.
-    </p>
-</div>
-
-<!-- VIDEO + SLIDER -->
-<div class="media-section">
-
-    <!-- VIDEO -->
-    <div class="video-side">
-        <iframe src="https://www.youtube.com/embed/zCBovYfN34Q"
-        frameborder="0"
-        allowfullscreen></iframe>
-    </div>
-
-    <!-- SLIDER -->
-    <div class="slider-side">
-        <div class="slider">
-            <span class="prev" onclick="changeSlide(-1)">❮</span>
-            <img id="sliderImage" src="th_1.jpg">
-            <span class="next" onclick="changeSlide(1)">❯</span>
+  <header>
+    <div class="page-shell">
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav-left">
+          <a href="/" aria-label="Leather Leg Warmers home">
+            <img src="logo.jpg"
+                 alt="Leather Leg Warmers logo"
+                 class="logo-img" />
+          </a>
+          <a href="/" class="logo-text">Leather Leg Warmers</a>
         </div>
+        <div class="nav-links">
+          <a href="#shop">Shop</a>
+          <a href="#sizing">Sizing</a>
+          <a href="#care">Leather Care</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="#shop" class="btn-outline">Shop Now</a>
+      </nav>
     </div>
+  </header>
 
+  <div class="page-shell">
+    <main>
+      <!-- Hero / value prop -->
+      <section class="card" id="top">
+        <div class="hero">
+          <div>
+            <div class="hero-eyebrow">100% Genuine Leather · Thigh‑High</div>
+            <h1>
+              Turn every heel into a <span>boot‑length statement</span>.
+            </h1>
+            <p class="hero-sub">
+              Elevate your style with genuine leather thigh‑high leg warmers designed to be worn over shoes, pumps, booties, or ankle boots for a long, sleek boot silhouette from ankle to mid‑thigh.
+            </p>
+            <ul class="hero-list">
+              <li>Butter‑soft leather that elongates the leg and adds bold, high‑fashion drama.</li>
+              <li>Made to slip over your existing footwear for effortless day‑to‑night looks.</li>
+              <li>Detailed measurements for a secure, flattering fit across sizes.</li>
+            </ul>
+            <div class="hero-cta">
+              <a href="#shop" class="btn-primary">Shop Thigh‑High Warmers</a>
+              <a href="#sizing" class="btn-outline">View Sizing Guide</a>
+            </div>
+            <div class="hero-meta">
+              Free style upgrade in seconds · Designed to pair with your favorite heels and boots.
+            </div>
+            <div class="trust-strip" aria-label="Store highlights">
+              <div class="trust-pill">100% genuine leather</div>
+              <div class="trust-pill">Thigh‑high silhouette</div>
+              <div class="trust-pill">Pairs with pumps, booties & ankle boots</div>
+            </div>
+          </div>
+
+          <!-- HERO VIDEO -->
+<div class="hero-media-wrapper" style="border-radius:1.5rem;overflow:hidden;position:relative;background:#000;">
+  <span class="badge"><span>Watch</span> How they transform heels</span>
+
+  <!-- Aspect ratio container for 16:9 -->
+  <div style="position:relative;width:100%;padding-top:56.25%;overflow:hidden;">
+    <iframe
+      src="https://www.youtube.com/embed/zCBovYfN34Q?rel=0&modestbranding=1"
+      title="Leather leg warmers styling video"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+    </iframe>
+  </div>
 </div>
 
-<!-- PRODUCT DETAILS -->
-<div class="product-details">
-    <div class="price">$145.00</div>
+        </div>
+      </section>
 
-    <label>Select Size:</label><br>
-    <select>
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
+      <!-- Shop section: single product type -->
+      <section class="section card" id="shop">
+        <header class="section-header">
+          <h2>Shop Thigh‑High Leg Warmers</h2>
+          <p>Our signature 100% genuine leather thigh‑high leg warmers are designed to slip over shoes, pumps, booties, or ankle boots.</p>
+        </header>
+
+        <div class="products-grid">
+          <article class="product-card">
+  <div class="product-media">
+    <img src="th_1.jpg"
+         alt="Black genuine leather thigh‑high leg warmers styled with stiletto heels"
+         loading="lazy" />
+  </div>
+  <h3 class="product-title">Thigh‑High Leather Leg Warmers – Black</h3>
+  <div class="product-meta">
+    <span class="price">$145</span>
+    <span class="pill">Thigh‑High</span>
+  </div>
+  
+  <!-- SIZE SELECTOR -->
+  <div style="margin: 0.8rem 0;">
+    <label for="product-size" style="display:block;font-size:0.8rem;font-weight:500;color:var(--text);margin-bottom:0.3rem;">
+      Select Size
+    </label>
+    <select id="product-size" style="width:100%;padding:0.6rem;border:1px solid rgba(0,0,0,0.12);border-radius:8px;font-size:0.9rem;background:#fff;">
+      <option value="">Choose your size...</option>
+      <option value="s">S (Calf 13.5", Thigh 14-17")</option>
+      <option value="m">M (Calf 14.5", Thigh 15-18")</option>
+      <option value="l">L (Calf 15.5", Thigh 16-19")</option>
+      <option value="xl">XL (Calf 16.5", Thigh 17-20")</option>
     </select>
+  </div>
+  
+  <p style="font-size:0.85rem;color:var(--muted);">
+    Butter‑soft genuine leather that hugs the leg from ankle to mid‑thigh. Designed to elongate the leg and turn pumps into statement "boots."
+  </p>
+  <div class="product-actions">
+    <button class="btn-primary" id="add-to-cart" disabled>Add to Cart – $145</button>
+  </div>
+</article>
 
-    <a href="https://buy.stripe.com/4gMbIUdPjejT934aO738400" class="btn stripe">Pay with Card / Google Pay</a>
-    <a href="https://www.paypal.com/ncp/payment/N5V64M2FBB2GL" class="btn paypal">Pay with PayPal</a>
-</div>
+        </div>
+      </section>
 
-<!-- SIZE CHART -->
-<h2 style="margin-top:60px; text-align:center;">Size Chart</h2>
+      <!-- Sizing section -->
+      <section class="section card" id="sizing">
+        <header class="section-header">
+          <h2>Sizing & Fit</h2>
+          <p>Use the measurements below to find your ideal size. Measure over bare legs at the calf, thigh, and ankle where the leg warmer will sit.</p>
+        </header>
 
-<table>
-<tr>
-<th>Measurement</th><th>S</th><th>M</th><th>L</th><th>XL</th>
-</tr>
-<tr>
-<td>Inseam</td><td>25 1/2"</td><td>26"</td><td>26 1/2"</td><td>27"</td>
-</tr>
-<tr>
-<td>Calf</td><td>13 1/2"</td><td>14 1/2"</td><td>15 1/2"</td><td>16 1/2"</td>
-</tr>
-<tr>
-<td>Thigh</td><td>14-17"</td><td>15-18"</td><td>16-19"</td><td>17-20"</td>
-</tr>
-<tr>
-<td>Ankle</td><td>9 1/2"</td><td>10"</td><td>10 1/2"</td><td>11"</td>
-</tr>
-</table>
+        <div class="sizing-table-wrapper">
+          <table aria-label="Leather leg warmers size chart">
+            <thead>
+              <tr>
+                <th>Measurement</th>
+                <th>S</th>
+                <th>M</th>
+                <th>L</th>
+                <th>XL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inseam</td>
+                <td>25 1/2"</td>
+                <td>26"</td>
+                <td>26 1/2"</td>
+                <td>27"</td>
+              </tr>
+              <tr>
+                <td>Calf</td>
+                <td>13 1/2"</td>
+                <td>14 1/2"</td>
+                <td>15 1/2"</td>
+                <td>16 1/2"</td>
+              </tr>
+              <tr>
+                <td>Thigh</td>
+                <td>14–17"</td>
+                <td>15–18"</td>
+                <td>16–19"</td>
+                <td>17–20"</td>
+              </tr>
+              <tr>
+                <td>Ankle</td>
+                <td>9 1/2"</td>
+                <td>10"</td>
+                <td>10 1/2"</td>
+                <td>11"</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--muted);">
+          For the most accurate fit, measure with a soft tape, keeping it snug but not tight. If you are between sizes, choose the larger size for more ease over denim or thicker layers.
+        </p>
+      </section>
 
-</div>
+      <!-- Leather care / styling -->
+      <section class="section card" id="care">
+        <header class="section-header">
+          <h2>Leather Care & Styling</h2>
+          <p>Extend the life of your leather leg warmers and keep them looking rich and supple with simple care habits.</p>
+        </header>
+        <div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:1.5rem;">
+          <div>
+            <h3 style="font-size:1rem;margin-bottom:0.4rem;">Care Instructions</h3>
+            <ul class="care-list">
+              <li>Spot clean with a dedicated leather cleaner; avoid soaking the leather.</li>
+              <li>Wipe with a slightly damp, soft cloth to remove surface dust after wear.</li>
+              <li>Condition occasionally with a quality leather conditioner to maintain softness.</li>
+              <li>Allow to air‑dry away from direct heat if exposed to moisture.</li>
+              <li>Store flat or gently rolled to avoid hard creases in the leather.</li>
+            </ul>
+
+            <h3 style="font-size:1rem;margin:1.1rem 0 0.4rem;">How to Wear</h3>
+            <ul class="care-list">
+              <li>Slip over pumps, booties, or ankle boots for an instant tall‑boot look.</li>
+              <li>Style with mini dresses, skirts, or skinny denim to highlight the full length.</li>
+              <li>Pair with evening wear for a sleek, high‑fashion finish or with streetwear for bold contrast.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;margin-bottom:0.4rem;">Questions?</h3>
+            <p style="font-size:0.85rem;color:var(--muted);">
+              Need help picking a size or wondering how they will look with a specific shoe? Send us your measurements and a quick photo of your favorite pair of heels, and we can recommend the best style and size.
+            </p>
+            <a href="#contact" class="btn-outline" style="margin-top:0.75rem;display:inline-flex;">Ask a Fit Question</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / brand story -->
+      <section class="section card" id="about">
+        <header class="section-header">
+          <h2>About Leather Leg Warmers</h2>
+          <p>Inspired by high fashion, our leg warmers are crafted from rare, butter‑soft leather to add a bold, elongated silhouette to your favorite footwear.</p>
+        </header>
+        <p style="font-size:0.9rem;color:var(--muted);max-width:44rem;">
+          Leather Leg Warmers were created for style‑obsessed minimalists who want maximum impact with minimal effort. Each pair is designed to slip over shoes, pumps, booties, or ankle boots, transforming them into sleek, statement‑making “boots” without sacrificing comfort or versatility. Wear them out for a night, to events, or anytime you want your legs to take center stage.
+        </p>
+      </section>
+
+      <!-- Contact / footer -->
+      <section class="section card" id="contact">
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Have questions about fit, shipping, or custom options? Get in touch and we’ll respond as soon as possible.</p>
+        </header>
+        <p style="font-size:0.9rem;color:var(--muted);">
+          Email: <a href="mailto:info@leatherlegwarmers.com">info@leatherlegwarmers.com</a>
+        </p>
+        <p style="font-size:0.9rem;color:var(--muted);margin-top:0.3rem;">
+          Follow us on <a href="https://www.facebook.com/LeatherLegWarmers/" target="_blank" rel="noopener noreferrer">Facebook</a> for new drops and styling inspiration.
+        </p>
+      </section>
+
+      <footer>
+        <p>&copy; <span id="year"></span> Leather Leg Warmers. All rights reserved.</p>
+        <p style="margin-top:0.25rem;">Handcrafted genuine leather thigh‑high leg warmers designed to be worn over shoes, pumps, booties, or ankle boots.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 <script>
-const images = ["th_1.jpg","th_2.jpg","th_3.jpg","th_4.jpg","th_01.jpg","th_0.jpg"];
-let currentIndex = 0;
+  (function () {
+    const addBtn = document.getElementById('add-to-cart');
+    const sizeSelect = document.getElementById('product-size');
+    
+    if (!addBtn || !sizeSelect) return;
 
-function changeSlide(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = images.length - 1;
-    if (currentIndex >= images.length) currentIndex = 0;
-    document.getElementById("sliderImage").src = images[currentIndex];
-}
+    // Enable button when size is selected
+    sizeSelect.addEventListener('change', function () {
+      addBtn.disabled = !this.value;
+      addBtn.textContent = this.value ? `Add ${this.value.toUpperCase()} to Cart – $145` : 'Add to Cart – $145';
+    });
+
+    addBtn.addEventListener('click', function () {
+      if (!sizeSelect.value) {
+        alert('Please select a size first.');
+        return;
+      }
+
+      const item = {
+        id: 'thigh-high-black',
+        name: 'Thigh-High Leather Leg Warmers – Black',
+        size: sizeSelect.value.toUpperCase(),
+        price: 145,
+        qty: 1,
+        image: 'th_1.jpg'
+      };
+
+      localStorage.setItem('cartItem', JSON.stringify(item));
+      window.location.href = 'cart.html';
+    });
+  })();
 </script>
+
 
 </body>
 </html>
