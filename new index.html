@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essential Oversized Hoodie</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+
+    background-image: url("background.jpg");
+    background-size: cover;        /* makes image fill screen */
+    background-position: center;   /* keeps it centered */
+    background-repeat: no-repeat;  /* prevents repeating */
+    background-attachment: fixed;  /* subtle premium effect */
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 100px 20px 60px;
+}
+
+.header img {
+    width: 120px;
+}
+
+.header h1 {
+    font-size: 42px;
+    margin: 20px 0 10px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* MAIN SECTION */
+.main {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* SLIDER */
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+.slide.active {
+    display: block;
+}
+
+/* ARROWS */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: white;
+}
+
+/* DOTS */
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #222;
+}
+
+/* SIZE SECTION */
+.size-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.size-buttons button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.size-buttons button.active {
+    background: #222;
+    color: white;
+    border: 1px solid #222;
+}
+
+/* CART BUTTON */
+.cart-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.cart-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    background: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.cart-btn:hover {
+    opacity: 0.9;
+}
+
+/* SIZE TABLE */
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+}
+
+.size-table th,
+.size-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.size-table th {
+    background: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="logo.jpg" alt="Logo">
+        <h1>Leather Leg Warmers</h1>
+        <p>Elevate your style with 100% genuine leather leg warmers.
+        Designed to be worn over shoes, pumps, booties, or ankle boots,
+        they create the elegant illusion of boots from ankle to knee.
+	</p>
+	<p>
+        Inspired by high fashion and crafted from rare butter-soft leather,
+        they elongate the leg and add a bold, sophisticated statement.
+    </p>
+
+    </div>
+
+    <!-- VIDEO + SLIDER -->
+    <div class="main">
+
+        <div class="video-section">
+            <video autoplay muted loop>
+                <source src="https://www.youtube.com/embed/zCBovYfN34Q">
+            </video>
+        </div>
+
+        <div class="slider">
+            <img src="th_1.jpg" class="slide active">
+            <img src="th_2.jpg" class="slide">
+            <img src="th_3.jpg" class="slide">
+            <img src="th_4.jpg" class="slide">
+            <img src="th_01.jpg" class="slide">
+            <img src="th_0.jpg" class="slide">
+
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SIZE -->
+    <div class="size-section">
+        <h3>Select Size</h3>
+        <div class="size-buttons">
+            <button onclick="selectSize(this)">S</button>
+            <button onclick="selectSize(this)">M</button>
+            <button onclick="selectSize(this)">L</button>
+            <button onclick="selectSize(this)">XL</button>
+        </div>
+    </div>
+
+    <!-- CART -->
+    <div class="cart-section">
+        <button class="cart-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <!-- SIZE TABLE -->
+    <table class="size-table">
+        <tr>
+            <th>Measurement</th><th>S</th><th>M</th><th>L</th><th>XL</th>
+        </tr>
+        <tr><td>Inseam</td><td>25 1/2"</td><td>26"</td><td>26 1/2"</td><td>27"</td></tr>
+	<tr><td>Calf</td><td>13 1/2"</td><td>14 1/2"</td><td>15 1/2"</td><td>16 1/2"</td></tr>
+	<tr><td>Thigh</td><td>14-17"</td><td>15-18"</td><td>16-19"</td><td>17-20"</td></tr>
+	<tr><td>Ankle</td><td>9 1/2"</td><td>10"</td><td>10 1/2"</td><td>11"</td></tr>
+    </table>
+
+</div>
+
+<script>
+let currentSlide = 0;
+let selectedSize = null;
+
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+/* SLIDER */
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+    });
+
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    currentSlide = index;
+}
+
+next.addEventListener('click', () => {
+    let newIndex = (currentSlide + 1) % slides.length;
+    showSlide(newIndex);
+});
+
+prev.addEventListener('click', () => {
+    let newIndex = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(newIndex);
+});
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+    });
+});
+
+/* AUTO SLIDE */
+setInterval(() => {
+    let newIndex = (currentSlide + 1) % slides.length;
+    showSlide(newIndex);
+}, 4000);
+
+/* SIZE SELECTION */
+function selectSize(button) {
+    const buttons = document.querySelectorAll('.size-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    selectedSize = button.innerText;
+}
+
+/* ADD TO CART */
+function addToCart() {
+    if (!selectedSize) {
+        alert("Please select a size first.");
+        return;
+    }
+    alert("Added to cart - Size: " + selectedSize);
+}
+</script>
+
+</body>
+</html>
