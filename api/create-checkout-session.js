@@ -22,6 +22,9 @@ export default async function handler(req, res) {
       shipping_address_collection: {
       allowed_countries: ['US', 'CA', 'GB', 'AU', 'DE', 'FR']
     },
+      shipping_options: [
+      { shipping_rate: 'shr_1T2Des74HpmvEux97Zzh1tTh' }
+    ],
       success_url: `${req.headers.origin}/success.html`,
       cancel_url: `${req.headers.origin}/cart.html`,
     });
