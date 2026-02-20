@@ -298,11 +298,6 @@ checkoutBtn.addEventListener('click', async () => {
         removeBtn.addEventListener('click', clearCartAndRenderEmpty);
         clearBtn.addEventListener('click', clearCartAndRenderEmpty);
 
-        checkoutBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          // TODO: replace alert with redirect to your real payment link
-          alert('This is a demo checkout button. Connect this to Stripe / Gumroad / other payment link.');
-        });
       }
 
       render();
@@ -313,4 +308,5 @@ checkoutBtn.addEventListener('click', async () => {
 	
 </body>
 </html>
+
 
