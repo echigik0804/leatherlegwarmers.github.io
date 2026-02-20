@@ -19,6 +19,9 @@ export default async function handler(req, res) {
           quantity: quantity,
         },
       ],
+      shipping_address_collection: {
+      allowed_countries: ['US', 'CA', 'GB', 'AU', 'DE', 'FR']
+    },
       success_url: `${req.headers.origin}/success.html`,
       cancel_url: `${req.headers.origin}/cart.html`,
     });
