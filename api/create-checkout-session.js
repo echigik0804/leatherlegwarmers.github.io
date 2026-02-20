@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       payment_method_types: ['card'],
       line_items: [
         {
-          price: 'price_XXXX', // ← Replace with your real Stripe Price ID
+          price: 'price_1T2D6G74HpmvEux9liEhWCqR', 
           quantity: quantity,
         },
       ],
