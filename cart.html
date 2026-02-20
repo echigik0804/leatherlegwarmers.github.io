@@ -232,7 +232,7 @@
             </div>
             <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
               <button type="button" class="btn-outline" id="clear-cart">Clear Cart</button>
-              <a href="https://buy.stripe.com/4gMbIUdPjejT934aO738400" id="checkout-button" class="btn-primary">Checkout</a>
+              <button id="checkout-button" class="btn-primary">Checkout</button>
             </div>
           </div>
         `;
@@ -247,6 +247,29 @@
         const clearBtn = document.getElementById('clear-cart');
         const checkoutBtn = document.getElementById('checkout-button');
 
+		const stripe = Stripe('pk_live_51T2CcO74HpmvEux926SLOMcd4BIZYxyPfP4uDfeTc57dJjFtlFa0aybVetVPqoDG5bWEiEB8ZD1mN1kPysMJpv4h00o6jw2hT2'); // your public key
+
+checkoutBtn.addEventListener('click', async () => {
+  try {
+    const response = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ quantity: item.qty })
+    });
+
+    const session = await response.json();
+
+    if (session.id) {
+      await stripe.redirectToCheckout({ sessionId: session.id });
+    } else {
+      alert('Error creating checkout session.');
+    }
+  } catch (err) {
+    console.error(err);
+    alert('Checkout failed.');
+  }
+});
+		  
         minus.addEventListener('click', () => {
           if (item.qty > 1) {
             item.qty -= 1;
@@ -285,5 +308,9 @@
       render();
     })();
   </script>
+
+	<script src="https://js.stripe.com/v3/"></script>
+	
 </body>
 </html>
+
