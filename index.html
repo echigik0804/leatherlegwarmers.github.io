@@ -134,20 +134,23 @@
         color: var(--muted);
         line-height: 1.8;
       }
-      .video-frame {
-        position: relative;
-        aspect-ratio: 16/9;
-        background: #0e0d0c;
-        overflow: hidden;
-        box-shadow: 0 24px 70px #17161526;
-      }
-      .video-frame video {
-        width: 100%;
-        height: 150%;
-        display: block;
-        object-fit: cover;
-        background: #0e0d0c;
-      }
+      .video-frame { 
+  position: relative; 
+  aspect-ratio: 9/16; /* Updated for vertical video */
+  background: #0e0d0c; 
+  overflow: hidden; 
+  box-shadow: 0 24px 70px #17161526; 
+  max-height: 80vh; /* Optional: Prevents vertical videos from overflowing tall screens */
+  margin: 0 auto;   /* Optional: Centers the video frame horizontally */
+} 
+
+.video-frame video { 
+  width: 100%; 
+  height: 100%; 
+  display: block; 
+  object-fit: cover; /* Keeps video filling the frame; change to 'contain' if you don't want cropping */
+  background: #0e0d0c; 
+}
 
     .hero {
       display: grid;
