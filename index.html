@@ -600,16 +600,19 @@
     	<span class="pill">Thigh‑High</span>
   	</div>
 
-  <!-- SIZE SELECTOR -->
-		</div>
-          <label class="label">Select your size <a href="#faq">Size guide</a></label>
-          <div class="sizes" role="group" aria-label="Select size">
-            <button class="size" data-size="XS">XS</button
-            ><button class="size active" data-size="S">S</button
-            ><button class="size" data-size="M">M</button
-            ><button class="size" data-size="L">L</button
-            ><button class="size" data-size="XL">XL</button>
-          </div>
+	  <!-- SIZE SELECTOR -->
+		<div class="option-group">
+                <div class="option-label">
+                    <span>Select Size</span>
+                    <span class="size-trigger-link" onclick="toggleModal(true)">Find My Sizing Metric</span>
+                </div>
+                <div class="swatch-grid" id="sizeSelector">
+                    <div class="swatch" onclick="selectSize(this, 'S')">S <span>Calf 13.5"</span></div>
+                    <div class="swatch selected" onclick="selectSize(this, 'M')">M <span>Calf 14.5"</span></div>
+                    <div class="swatch" onclick="selectSize(this, 'L')">L <span>Calf 15.5"</span></div>
+                    <div class="swatch" onclick="selectSize(this, 'XL')">XL <span>Calf 16.5"</span></div>
+                </div>
+            </div>
   
 		  <p style="font-size:0.85rem;color:var(--muted);">
 		    Butter‑soft genuine leather that hugs the leg from ankle to mid‑thigh. Designed to elongate the leg and turn pumps into statement "boots."
