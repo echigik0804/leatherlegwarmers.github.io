@@ -114,7 +114,45 @@
       backdrop-filter: blur(6px);
     }
 
-	      .hero {
+	     
+	  .video-section {
+        background: var(--soft);
+        padding: 95px 25px;
+      }
+      .video-wrap {
+        max-width: 1120px;
+        margin: auto;
+      }
+      .video-head {
+        text-align: center;
+        max-width: 620px;
+        margin: 0 auto 40px;
+      }
+      .video-head h2 {
+        margin-bottom: 16px;
+      }
+      .video-head p {
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .video-frame { 
+		  position: relative; 
+		  aspect-ratio: 9/16; /* Updated for vertical video */
+		  background: #0e0d0c; 
+		  overflow: hidden; 
+		  box-shadow: 0 24px 70px #17161526; 
+		  max-height: 80vh; /* Optional: Prevents vertical videos from overflowing tall screens */
+		  margin: 0 auto;   /* Optional: Centers the video frame horizontally */
+		} 
+
+		.video-frame video { 
+		  width: 100%; 
+		  height: 100%; 
+		  display: block; 
+		  object-fit: cover; /* Keeps video filling the frame; change to 'contain' if you don't want cropping */
+		  background: #0e0d0c; 
+		}
+ .hero {
       display: grid;
       grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
       gap: 2.25rem;
@@ -160,44 +198,6 @@
       font-size: 0.8rem;
       color: var(--muted);
     }
-	  .video-section {
-        background: var(--soft);
-        padding: 95px 25px;
-      }
-      .video-wrap {
-        max-width: 1120px;
-        margin: auto;
-      }
-      .video-head {
-        text-align: center;
-        max-width: 620px;
-        margin: 0 auto 40px;
-      }
-      .video-head h2 {
-        margin-bottom: 16px;
-      }
-      .video-head p {
-        color: var(--muted);
-        line-height: 1.8;
-      }
-      .video-frame { 
-		  position: relative; 
-		  aspect-ratio: 9/16; /* Updated for vertical video */
-		  background: #0e0d0c; 
-		  overflow: hidden; 
-		  box-shadow: 0 24px 70px #17161526; 
-		  max-height: 80vh; /* Optional: Prevents vertical videos from overflowing tall screens */
-		  margin: 0 auto;   /* Optional: Centers the video frame horizontally */
-		} 
-
-		.video-frame video { 
-		  width: 100%; 
-		  height: 100%; 
-		  display: block; 
-		  object-fit: cover; /* Keeps video filling the frame; change to 'contain' if you don't want cropping */
-		  background: #0e0d0c; 
-		}
-
 .shop {
   margin-top: 2rem;
 }
