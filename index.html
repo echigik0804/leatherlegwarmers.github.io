@@ -152,6 +152,7 @@
 		  object-fit: cover; /* Keeps video filling the frame; change to 'contain' if you don't want cropping */
 		  background: #0e0d0c; 
 		}
+	  
 	 .hero {
 	      display: grid;
 	      grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
@@ -207,90 +208,102 @@
 	  justify-content: center;
 	}
 /* HERO MEDIA / SLIDER */
-    .hero-media-wrapper {
-      position: relative;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.06);
-      background: #f2f2f2;
-      min-height: 260px;
-    }
-	.hero-media-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-    .hero-slider {
-      aspect-ratio: 4 / 5;
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-	width: 100%; 
-  	max-width: 300px;  
-  	height: 75%; 
-  	margin: 0 auto;
-    }
-    .hero-slider-track {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    .hero-slider-track img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 0.35s ease;
-    }
-    .hero-slider-track img.is-active {
-      opacity: 1;
-    }
-    .hero-slider-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      border: none;
-      background: rgba(255,255,255,0.85);
-      border-radius: 999px;
-      width: 32px;
-      height: 32px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 1.1rem;
-      color: #333;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .hero-slider-prev { left: 0.65rem; }
-    .hero-slider-next { right: 0.65rem; }
-    .hero-slider-arrow:hover {
-      background: #ffffff;
-    }
-    .hero-slider-dots {
-      position: absolute;
-      bottom: 0.7rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 0.35rem;
-    }
-    .hero-slider-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      border: none;
-      padding: 0;
-      background: rgba(0,0,0,0.2);
-      cursor: pointer;
-    }
-    .hero-slider-dot.is-active {
-      width: 16px;
-      background: #111111;
-    }
+.hero-media-wrapper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #f2f2f2;
+  min-height: 260px;
+}
+
+.hero-media-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.hero-slider {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero-slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider-track img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.hero-slider-track img.is-active {
+  opacity: 1;
+}
+
+.hero-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255,255,255,0.85);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.hero-slider-prev { left: 0.65rem; }
+.hero-slider-next { right: 0.65rem; }
+
+.hero-slider-arrow:hover {
+  background: #ffffff;
+}
+
+.hero-slider-dots {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.35rem;
+}
+
+.hero-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.hero-slider-dot.is-active {
+  width: 16px;
+  background: #111111;
+}
 
     .badge {
       position: absolute;
