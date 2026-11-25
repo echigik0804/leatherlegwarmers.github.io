@@ -135,22 +135,22 @@
         line-height: 1.8;
       }
       .video-frame { 
-  position: relative; 
-  aspect-ratio: 9/16; /* Updated for vertical video */
-  background: #0e0d0c; 
-  overflow: hidden; 
-  box-shadow: 0 24px 70px #17161526; 
-  max-height: 80vh; /* Optional: Prevents vertical videos from overflowing tall screens */
-  margin: 0 auto;   /* Optional: Centers the video frame horizontally */
-} 
+		  position: relative; 
+		  aspect-ratio: 9/16; /* Updated for vertical video */
+		  background: #0e0d0c; 
+		  overflow: hidden; 
+		  box-shadow: 0 24px 70px #17161526; 
+		  max-height: 80vh; /* Optional: Prevents vertical videos from overflowing tall screens */
+		  margin: 0 auto;   /* Optional: Centers the video frame horizontally */
+		} 
 
-.video-frame video { 
-  width: 100%; 
-  height: 100%; 
-  display: block; 
-  object-fit: cover; /* Keeps video filling the frame; change to 'contain' if you don't want cropping */
-  background: #0e0d0c; 
-}
+		.video-frame video { 
+		  width: 100%; 
+		  height: 100%; 
+		  display: block; 
+		  object-fit: cover; /* Keeps video filling the frame; change to 'contain' if you don't want cropping */
+		  background: #0e0d0c; 
+		}
 
     .hero {
       display: grid;
@@ -218,6 +218,12 @@
       background: #f2f2f2;
       min-height: 260px;
     }
+	   .hero-media-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
     .hero-slider {
       aspect-ratio: 4 / 5;
       display: flex;
@@ -242,7 +248,7 @@
       opacity: 0;
       transition: opacity 0.35s ease;
     }
-    .hero-slider-track img. is-active {
+    .hero-slider-track img.is-active {
       opacity: 1;
     }
     .hero-slider-arrow {
@@ -565,7 +571,7 @@
 		<!-- HERO SLIDER: 6 pictures -->
 		--<div class="hero-media-wrapper hero-slider">            
             <div class="hero-slider-track">
-              <img src="HT_01.jpg"  alt="Leather leg warmers styled with mini dress" />
+              <img src="HT_01.jpg"  alt="Leather leg warmers styled with mini dress" class="is-active"  />
               <img src="th_01.jpg"  alt="Leather leg warmers with mini skirt" />
               <img src="th_02.jpg"  alt="Leather leg warmers side" />
               <img src="th_03.jpg" alt="Leather leg warmers front" />
